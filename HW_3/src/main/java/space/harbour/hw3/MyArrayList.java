@@ -51,12 +51,28 @@ public class MyArrayList<T> implements Collection<T> {
         size = 0;
     }
 
-    public boolean contains(Object o) {
-        throw new UnsupportedOperationException("contains is not implemented");
+    public T get(int ind) {
+        return arr[ind];
     }
 
     public Iterator<T> iterator() {
-        return new MyIterator(arr);
+        return new MyIterator(arr, size);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < size; ++i) {
+            sb.append(arr[i]);
+            if (i < size - 1) {
+                sb.append(" ");
+            }
+        }
+        return sb.toString();
+    }
+
+    public boolean contains(Object o) {
+        throw new UnsupportedOperationException("contains is not implemented");
     }
 
     public Object[] toArray() {
@@ -85,10 +101,12 @@ public class MyArrayList<T> implements Collection<T> {
 
     public class MyIterator implements Iterator<T> {
         T[] elems;
+        int size;
         int pos;
 
-        public MyIterator(T[] elems) {
+        public MyIterator(T[] elems, int size) {
             this.elems = elems;
+            this.size = size;
             pos = 0;
         }
 
