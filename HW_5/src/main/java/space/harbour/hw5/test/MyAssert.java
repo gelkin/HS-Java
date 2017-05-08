@@ -25,23 +25,7 @@ public class MyAssert {
             }
         }
 
-        if (!isOk) {
-            throw new MyAssertionError();
-        }
+        assertTrue(isOk);
     }
 
-    public static class MyAssertionError extends AssertionError {
-        String msg = "";
-
-        MyAssertionError() { }
-
-        MyAssertionError(String msg) {
-            this.msg = msg;
-        }
-
-        @Override
-        public String toString() {
-            return msg;
-        }
-    }
 }

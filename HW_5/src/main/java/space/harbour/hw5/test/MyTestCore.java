@@ -46,9 +46,9 @@ public class MyTestCore {
             System.out.println("All tests successfully passed!");
 
         } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (MyAssert.MyAssertionError e) {
-            System.err.println("CAUGHT EXCEPTION:");
+            if (e.getTargetException() instanceof MyAssertionError) {
+                System.err.println("GOT ERROR ON TESTS:");
+            }
             e.printStackTrace();
         }
     }
