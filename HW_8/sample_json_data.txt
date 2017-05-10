@@ -1,0 +1,1 @@
+{"value1":1,"boolT":true,"boolF":false,"value2":"abc","intArr":[1,2,3],"stringArr":["str1","str2"],"someLists":[[1,2],[7,6,5],[10,20]],"arrayOfLists":[[1,2],[7,6,5],[10,20]],"bro":{"value1":1,"boolT":true,"boolF":false,"value2":"abc","intArr":[1,2,3],"stringArr":["str1","str2"]}}
