@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Created-By: gelkin
+Main-Class: space.harbour.hw12.Main
+
+
